@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "hyperx": "^2.4.0",
+    "snabbdom": "^0.7.1",
     "virtual-dom": "^2.1.1"
   }
 }

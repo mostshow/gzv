@@ -1,29 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-const { app, html } = require("gzv")
-
-const model = { name: "" }
-
-const view = (model, dispatch) => html`
-    <div>
-        <h1>Hello${model.name === "" ? "!" : `, ${model.name}!`}</h1>
-        Name: <input type="text" oninput=${e =>
-            dispatch({
-                type: "UPDATE_TEXT",
-                value: e.target.value
-            })
-        }/>
-    </div>`
-
-const update = {
-    UPDATE_TEXT: (model, action) =>
-        Object.assign({}, model, { name: action.value })
-}
-
-app(model, view, update)
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/input/index.js","/input")
-},{"_process":43,"buffer":4,"gzv":5}],2:[function(require,module,exports){
-(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict'
 
 exports.byteLength = byteLength
@@ -177,11 +153,11 @@ function fromByteArray (uint8) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/base64-js/index.js","/node_modules/base64-js")
-},{"_process":43,"buffer":4}],3:[function(require,module,exports){
+},{"_process":42,"buffer":3}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/browser-resolve/empty.js","/node_modules/browser-resolve")
-},{"_process":43,"buffer":4}],4:[function(require,module,exports){
+},{"_process":42,"buffer":3}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1921,7 +1897,7 @@ function numberIsNaN (obj) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/buffer/index.js","/node_modules/buffer")
-},{"_process":43,"base64-js":2,"buffer":4,"ieee754":42}],5:[function(require,module,exports){
+},{"_process":42,"base64-js":1,"buffer":3,"ieee754":41}],4:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 const { h, create, diff, patch } = require("virtual-dom")
 const html = require("hyperx")(h)
@@ -1975,7 +1951,7 @@ module.exports = { html, app }
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/index.js","/node_modules/gzv")
-},{"_process":43,"buffer":4,"hyperx":10,"virtual-dom":17}],6:[function(require,module,exports){
+},{"_process":42,"buffer":3,"hyperx":9,"virtual-dom":16}],5:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*!
  * Cross-Browser Split 1.1.1
@@ -2085,7 +2061,7 @@ module.exports = (function split(undef) {
 })();
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/browser-split/index.js","/node_modules/gzv/node_modules/browser-split")
-},{"_process":43,"buffer":4}],7:[function(require,module,exports){
+},{"_process":42,"buffer":3}],6:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2109,7 +2085,7 @@ function EvStore(elem) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/ev-store/index.js","/node_modules/gzv/node_modules/ev-store")
-},{"_process":43,"buffer":4,"individual/one-version":12}],8:[function(require,module,exports){
+},{"_process":42,"buffer":3,"individual/one-version":11}],7:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var topLevel = typeof global !== 'undefined' ? global :
     typeof window !== 'undefined' ? window : {}
@@ -2130,7 +2106,7 @@ if (typeof document !== 'undefined') {
 module.exports = doccy;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/global/document.js","/node_modules/gzv/node_modules/global")
-},{"_process":43,"buffer":4,"min-document":3}],9:[function(require,module,exports){
+},{"_process":42,"buffer":3,"min-document":2}],8:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = attributeToProperty
 
@@ -2153,7 +2129,7 @@ function attributeToProperty (h) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/hyperscript-attribute-to-property/index.js","/node_modules/gzv/node_modules/hyperscript-attribute-to-property")
-},{"_process":43,"buffer":4}],10:[function(require,module,exports){
+},{"_process":42,"buffer":3}],9:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var attrToProp = require('hyperscript-attribute-to-property')
 
@@ -2451,7 +2427,7 @@ var closeRE = RegExp('^(' + [
 function selfClosing (tag) { return closeRE.test(tag) }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/hyperx/index.js","/node_modules/gzv/node_modules/hyperx")
-},{"_process":43,"buffer":4,"hyperscript-attribute-to-property":9}],11:[function(require,module,exports){
+},{"_process":42,"buffer":3,"hyperscript-attribute-to-property":8}],10:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2474,7 +2450,7 @@ function Individual(key, value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/individual/index.js","/node_modules/gzv/node_modules/individual")
-},{"_process":43,"buffer":4}],12:[function(require,module,exports){
+},{"_process":42,"buffer":3}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -2500,7 +2476,7 @@ function OneVersion(moduleName, version, defaultValue) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/individual/one-version.js","/node_modules/gzv/node_modules/individual")
-},{"./index.js":11,"_process":43,"buffer":4}],13:[function(require,module,exports){
+},{"./index.js":10,"_process":42,"buffer":3}],12:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict";
 
@@ -2509,28 +2485,28 @@ module.exports = function isObject(x) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/is-object/index.js","/node_modules/gzv/node_modules/is-object")
-},{"_process":43,"buffer":4}],14:[function(require,module,exports){
+},{"_process":42,"buffer":3}],13:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var createElement = require("./vdom/create-element.js")
 
 module.exports = createElement
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/create-element.js","/node_modules/gzv/node_modules/virtual-dom")
-},{"./vdom/create-element.js":20,"_process":43,"buffer":4}],15:[function(require,module,exports){
+},{"./vdom/create-element.js":19,"_process":42,"buffer":3}],14:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var diff = require("./vtree/diff.js")
 
 module.exports = diff
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/diff.js","/node_modules/gzv/node_modules/virtual-dom")
-},{"./vtree/diff.js":40,"_process":43,"buffer":4}],16:[function(require,module,exports){
+},{"./vtree/diff.js":39,"_process":42,"buffer":3}],15:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var h = require("./virtual-hyperscript/index.js")
 
 module.exports = h
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/h.js","/node_modules/gzv/node_modules/virtual-dom")
-},{"./virtual-hyperscript/index.js":27,"_process":43,"buffer":4}],17:[function(require,module,exports){
+},{"./virtual-hyperscript/index.js":26,"_process":42,"buffer":3}],16:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var diff = require("./diff.js")
 var patch = require("./patch.js")
@@ -2549,14 +2525,14 @@ module.exports = {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/index.js","/node_modules/gzv/node_modules/virtual-dom")
-},{"./create-element.js":14,"./diff.js":15,"./h.js":16,"./patch.js":18,"./vnode/vnode.js":36,"./vnode/vtext.js":38,"_process":43,"buffer":4}],18:[function(require,module,exports){
+},{"./create-element.js":13,"./diff.js":14,"./h.js":15,"./patch.js":17,"./vnode/vnode.js":35,"./vnode/vtext.js":37,"_process":42,"buffer":3}],17:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var patch = require("./vdom/patch.js")
 
 module.exports = patch
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/patch.js","/node_modules/gzv/node_modules/virtual-dom")
-},{"./vdom/patch.js":23,"_process":43,"buffer":4}],19:[function(require,module,exports){
+},{"./vdom/patch.js":22,"_process":42,"buffer":3}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isObject = require("is-object")
 var isHook = require("../vnode/is-vhook.js")
@@ -2657,7 +2633,7 @@ function getPrototype(value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/apply-properties.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"../vnode/is-vhook.js":31,"_process":43,"buffer":4,"is-object":13}],20:[function(require,module,exports){
+},{"../vnode/is-vhook.js":30,"_process":42,"buffer":3,"is-object":12}],19:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var document = require("global/document")
 
@@ -2707,7 +2683,7 @@ function createElement(vnode, opts) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/create-element.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"../vnode/handle-thunk.js":29,"../vnode/is-vnode.js":32,"../vnode/is-vtext.js":33,"../vnode/is-widget.js":34,"./apply-properties":19,"_process":43,"buffer":4,"global/document":8}],21:[function(require,module,exports){
+},{"../vnode/handle-thunk.js":28,"../vnode/is-vnode.js":31,"../vnode/is-vtext.js":32,"../vnode/is-widget.js":33,"./apply-properties":18,"_process":42,"buffer":3,"global/document":7}],20:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // Maps a virtual DOM tree onto a real DOM tree in an efficient manner.
 // We don't want to read all of the DOM nodes in the tree so we use
@@ -2796,7 +2772,7 @@ function ascending(a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/dom-index.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"_process":43,"buffer":4}],22:[function(require,module,exports){
+},{"_process":42,"buffer":3}],21:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var applyProperties = require("./apply-properties")
 
@@ -2951,7 +2927,7 @@ function replaceRoot(oldRoot, newRoot) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/patch-op.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"../vnode/is-widget.js":34,"../vnode/vpatch.js":37,"./apply-properties":19,"./update-widget":24,"_process":43,"buffer":4}],23:[function(require,module,exports){
+},{"../vnode/is-widget.js":33,"../vnode/vpatch.js":36,"./apply-properties":18,"./update-widget":23,"_process":42,"buffer":3}],22:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var document = require("global/document")
 var isArray = require("x-is-array")
@@ -3035,7 +3011,7 @@ function patchIndices(patches) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/patch.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"./create-element":20,"./dom-index":21,"./patch-op":22,"_process":43,"buffer":4,"global/document":8,"x-is-array":41}],24:[function(require,module,exports){
+},{"./create-element":19,"./dom-index":20,"./patch-op":21,"_process":42,"buffer":3,"global/document":7,"x-is-array":40}],23:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isWidget = require("../vnode/is-widget.js")
 
@@ -3054,7 +3030,7 @@ function updateWidget(a, b) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vdom/update-widget.js","/node_modules/gzv/node_modules/virtual-dom/vdom")
-},{"../vnode/is-widget.js":34,"_process":43,"buffer":4}],25:[function(require,module,exports){
+},{"../vnode/is-widget.js":33,"_process":42,"buffer":3}],24:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -3085,7 +3061,7 @@ EvHook.prototype.unhook = function(node, propertyName) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/hooks/ev-hook.js","/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/hooks")
-},{"_process":43,"buffer":4,"ev-store":7}],26:[function(require,module,exports){
+},{"_process":42,"buffer":3,"ev-store":6}],25:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -3106,7 +3082,7 @@ SoftSetHook.prototype.hook = function (node, propertyName) {
 };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/hooks/soft-set-hook.js","/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/hooks")
-},{"_process":43,"buffer":4}],27:[function(require,module,exports){
+},{"_process":42,"buffer":3}],26:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -3247,7 +3223,7 @@ function errorString(obj) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/index.js","/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript")
-},{"../vnode/is-thunk":30,"../vnode/is-vhook":31,"../vnode/is-vnode":32,"../vnode/is-vtext":33,"../vnode/is-widget":34,"../vnode/vnode.js":36,"../vnode/vtext.js":38,"./hooks/ev-hook.js":25,"./hooks/soft-set-hook.js":26,"./parse-tag.js":28,"_process":43,"buffer":4,"x-is-array":41}],28:[function(require,module,exports){
+},{"../vnode/is-thunk":29,"../vnode/is-vhook":30,"../vnode/is-vnode":31,"../vnode/is-vtext":32,"../vnode/is-widget":33,"../vnode/vnode.js":35,"../vnode/vtext.js":37,"./hooks/ev-hook.js":24,"./hooks/soft-set-hook.js":25,"./parse-tag.js":27,"_process":42,"buffer":3,"x-is-array":40}],27:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 'use strict';
 
@@ -3305,7 +3281,7 @@ function parseTag(tag, props) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript/parse-tag.js","/node_modules/gzv/node_modules/virtual-dom/virtual-hyperscript")
-},{"_process":43,"browser-split":6,"buffer":4}],29:[function(require,module,exports){
+},{"_process":42,"browser-split":5,"buffer":3}],28:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isVNode = require("./is-vnode")
 var isVText = require("./is-vtext")
@@ -3349,7 +3325,7 @@ function renderThunk(thunk, previous) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/handle-thunk.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./is-thunk":30,"./is-vnode":32,"./is-vtext":33,"./is-widget":34,"_process":43,"buffer":4}],30:[function(require,module,exports){
+},{"./is-thunk":29,"./is-vnode":31,"./is-vtext":32,"./is-widget":33,"_process":42,"buffer":3}],29:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = isThunk
 
@@ -3358,7 +3334,7 @@ function isThunk(t) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/is-thunk.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"_process":43,"buffer":4}],31:[function(require,module,exports){
+},{"_process":42,"buffer":3}],30:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = isHook
 
@@ -3369,7 +3345,7 @@ function isHook(hook) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/is-vhook.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"_process":43,"buffer":4}],32:[function(require,module,exports){
+},{"_process":42,"buffer":3}],31:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var version = require("./version")
 
@@ -3380,7 +3356,7 @@ function isVirtualNode(x) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/is-vnode.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./version":35,"_process":43,"buffer":4}],33:[function(require,module,exports){
+},{"./version":34,"_process":42,"buffer":3}],32:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var version = require("./version")
 
@@ -3391,7 +3367,7 @@ function isVirtualText(x) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/is-vtext.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./version":35,"_process":43,"buffer":4}],34:[function(require,module,exports){
+},{"./version":34,"_process":42,"buffer":3}],33:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = isWidget
 
@@ -3400,12 +3376,12 @@ function isWidget(w) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/is-widget.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"_process":43,"buffer":4}],35:[function(require,module,exports){
+},{"_process":42,"buffer":3}],34:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 module.exports = "2"
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/version.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"_process":43,"buffer":4}],36:[function(require,module,exports){
+},{"_process":42,"buffer":3}],35:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var version = require("./version")
 var isVNode = require("./is-vnode")
@@ -3481,7 +3457,7 @@ VirtualNode.prototype.version = version
 VirtualNode.prototype.type = "VirtualNode"
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/vnode.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./is-thunk":30,"./is-vhook":31,"./is-vnode":32,"./is-widget":34,"./version":35,"_process":43,"buffer":4}],37:[function(require,module,exports){
+},{"./is-thunk":29,"./is-vhook":30,"./is-vnode":31,"./is-widget":33,"./version":34,"_process":42,"buffer":3}],36:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var version = require("./version")
 
@@ -3507,7 +3483,7 @@ VirtualPatch.prototype.version = version
 VirtualPatch.prototype.type = "VirtualPatch"
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/vpatch.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./version":35,"_process":43,"buffer":4}],38:[function(require,module,exports){
+},{"./version":34,"_process":42,"buffer":3}],37:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var version = require("./version")
 
@@ -3521,7 +3497,7 @@ VirtualText.prototype.version = version
 VirtualText.prototype.type = "VirtualText"
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vnode/vtext.js","/node_modules/gzv/node_modules/virtual-dom/vnode")
-},{"./version":35,"_process":43,"buffer":4}],39:[function(require,module,exports){
+},{"./version":34,"_process":42,"buffer":3}],38:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isObject = require("is-object")
 var isHook = require("../vnode/is-vhook")
@@ -3583,7 +3559,7 @@ function getPrototype(value) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vtree/diff-props.js","/node_modules/gzv/node_modules/virtual-dom/vtree")
-},{"../vnode/is-vhook":31,"_process":43,"buffer":4,"is-object":13}],40:[function(require,module,exports){
+},{"../vnode/is-vhook":30,"_process":42,"buffer":3,"is-object":12}],39:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var isArray = require("x-is-array")
 
@@ -4014,7 +3990,7 @@ function appendPatch(apply, patch) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/virtual-dom/vtree/diff.js","/node_modules/gzv/node_modules/virtual-dom/vtree")
-},{"../vnode/handle-thunk":29,"../vnode/is-thunk":30,"../vnode/is-vnode":32,"../vnode/is-vtext":33,"../vnode/is-widget":34,"../vnode/vpatch":37,"./diff-props":39,"_process":43,"buffer":4,"x-is-array":41}],41:[function(require,module,exports){
+},{"../vnode/handle-thunk":28,"../vnode/is-thunk":29,"../vnode/is-vnode":31,"../vnode/is-vtext":32,"../vnode/is-widget":33,"../vnode/vpatch":36,"./diff-props":38,"_process":42,"buffer":3,"x-is-array":40}],40:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var nativeIsArray = Array.isArray
 var toString = Object.prototype.toString
@@ -4026,7 +4002,7 @@ function isArray(obj) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/gzv/node_modules/x-is-array/index.js","/node_modules/gzv/node_modules/x-is-array")
-},{"_process":43,"buffer":4}],42:[function(require,module,exports){
+},{"_process":42,"buffer":3}],41:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -4114,7 +4090,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/ieee754/index.js","/node_modules/ieee754")
-},{"_process":43,"buffer":4}],43:[function(require,module,exports){
+},{"_process":42,"buffer":3}],42:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 // shim for using process in browser
 var process = module.exports = {};
@@ -4302,4 +4278,116 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/node_modules/process/browser.js","/node_modules/process")
-},{"_process":43,"buffer":4}]},{},[1]);
+},{"_process":42,"buffer":3}],43:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+const { html, app } = require("gzv")
+
+const FILTER = { All: 0, Active: 1, Completed: 2 }
+
+const model = {
+    todos: [],
+    text: "",
+    filter: {
+        values: ["All", "Active", "Completed"],
+        selected: 1
+    }
+}
+
+const update = ({ todos, text, filter }, msg) => {
+    switch (msg.type) {
+        case "ADD_TODO":
+            return {
+                todos: todos.concat({
+                    id: todos.length + 1,
+                    value: text,
+                    completed: false
+                }),
+                text: "",
+                filter
+            }
+
+        case "TOGGLE_TODO":
+            const newTodos = todos.map(t => t.id === msg.id
+                ? Object.assign({}, t, { completed: !t.completed })
+                : t)
+
+            return {
+                todos: newTodos,
+                text,
+                filter
+            }
+
+        case "UPDATE_TEXT":
+            return {
+                todos,
+                text: msg.value,
+                filter
+            }
+
+        case "UPDATE_FILTER":
+            return {
+                todos,
+                text,
+                filter: Object.assign({}, filter, { selected: msg.value })
+            }
+
+        default:
+            return model
+    }
+}
+
+const view = (model, dispatch) => {
+    const addHandler = e =>
+        dispatch({ type: "ADD_TODO" }, model)
+
+    const toggleHandler = id =>
+        dispatch({ type: "TOGGLE_TODO", id }, model)
+
+    const editHandler = e =>
+        dispatch({ type: "UPDATE_TEXT", value: e.target.value }, model)
+
+    const filterHandler = i =>
+        dispatch({ type: "UPDATE_FILTER", value: i }, model)
+
+    const listItem = t => {
+        const value = (model.filter.selected === FILTER.Completed && t.completed)
+            ? t.value
+            : (model.filter.selected === FILTER.Active && !t.completed)
+                ? t.value
+                : (model.filter.selected === FILTER.All)
+                    ? t.value
+                    : ""
+
+        if (value === "") return
+
+        return html`
+            <li
+                style=${{ textDecoration: t.completed ? "line-through" : "none" }}
+                onclick=${_ => toggleHandler(t.id)}>${value}</li>
+        `
+    }
+
+    const filterLink = _ => model.filter.values.map((v, i) =>
+        html`
+            <span>
+                ${(i !== model.filter.selected
+                ? html`<a href="#" onclick=${e => filterHandler(i, e.preventDefault())}>${v}</a>`
+                : v)}
+            </span>
+        `)
+
+    return html`
+        <div>
+            <input onchange=${editHandler} value=${model.text}/>
+            <button onclick=${addHandler}>Add</button>
+            <ul>
+                ${model.todos.map(listItem)}
+            </ul>
+            ${filterLink()}
+        </div>
+    `
+}
+
+app(model, view, update)
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/todo/index.js","/todo")
+},{"_process":42,"buffer":3,"gzv":4}]},{},[43]);
