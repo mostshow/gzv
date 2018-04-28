@@ -2,11 +2,22 @@
   "name": "gzv",
   "version": "0.0.0",
   "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "./app.js"
+  },
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.23.7",
     "browserify": "^16.2.0",
     "chokidar-cli": "^1.2.0",
     "gzv": "file:../"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-alpha.20",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babelify": "^8.0.0",
+    "hyperscript": "^2.0.2"
   }
 }
